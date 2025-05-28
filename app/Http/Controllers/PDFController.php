@@ -17,11 +17,17 @@ class PDFController extends Controller
     {
         $tempat_tanggal = $request->input('tempat_tanggal');
         $kepada = $request->input('kepada');
-        $judul = $request->input('judul');
-        $isi = $request->input('isi');
+        $nama = $request->input('nama');
+        $nim = $request->input('nim');
+        $ttl = $request->input('ttl');
+        $prodi = $request->input('prodi');
+        $fakultas = $request->input('fakultas');
+        $tanggal_lulus = $request->input('tanggal_lulus');
+        $alamat = $request->input('alamat');
+        $no_hp = $request->input('no_hp');
         $ttd = $request->input('ttd');
 
-        $html = view('surat.pdf-template', compact('tempat_tanggal', 'kepada', 'judul', 'isi', 'ttd'))->render();
+        $html = view('surat.pdf-template', compact('tempat_tanggal', 'kepada', 'nama', 'nim', 'ttl', 'prodi', 'fakultas', 'tanggal_lulus', 'alamat', 'no_hp', 'ttd'))->render();
 
         $pathToChromium = 'C:\Users\Rudy\.cache\puppeteer\chrome\win64-136.0.7103.94\chrome-win64\chrome.exe';
 
