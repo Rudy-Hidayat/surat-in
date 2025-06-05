@@ -24,10 +24,10 @@ class PDFController extends Controller
         $fakultas = $request->input('fakultas');
         $tanggal_lulus = $request->input('tanggal_lulus');
         $alamat = $request->input('alamat');
-        $no_hp = $request->input('no_hp');
+        $hp = $request->input('hp');
         $ttd = $request->input('ttd');
 
-        $html = view('surat.pdf-template', compact('tempat_tanggal', 'kepada', 'nama', 'nim', 'ttl', 'prodi', 'fakultas', 'tanggal_lulus', 'alamat', 'no_hp', 'ttd'))->render();
+        $html = view('surat.pdf-template', compact('tempat_tanggal', 'kepada', 'nama', 'nim', 'ttl', 'prodi', 'fakultas', 'tanggal_lulus', 'alamat', 'hp', 'ttd'))->render();
 
         $pathToChromium = 'C:\Users\Rudy\.cache\puppeteer\chrome\win64-136.0.7103.94\chrome-win64\chrome.exe';
 
